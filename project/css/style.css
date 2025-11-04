@@ -1,0 +1,255 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004466;
+    color: whitesmoke;
+    padding: 1em;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+    background: #012c42;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0.5em;
+}
+
+nav ul li a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1em;
+    transition: transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background: #038bcf;
+    transform: scale(1.1);
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    flex: 1;
+    padding: 1em;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   TABLE (Resistor Calculator)
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    text-align: center;
+    overflow-wrap: anywhere;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #004466;
+    color: whitesmoke;
+}
+
+/* Color classes */
+.black { background-color: #000; color: white; }
+.brown { background-color: #8B4513; color: white; }
+.red { background-color: #FF0000; color: white; }
+.orange { background-color: #FFA500; color: black; }
+.yellow { background-color: #FFFF00; color: black; }
+.green { background-color: #008000; color: white; }
+.blue { background-color: #0000FF; color: white; }
+.violet { background-color: #EE82EE; color: black; }
+.gray { background-color: #808080; color: white; }
+.white { background-color: #FFF; color: black; }
+.gold { background-color: #FFD700; color: black; }
+.silver { background-color: #C0C0C0; color: black; }
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #004466;
+    color: whitesmoke;
+    text-align: center;
+    padding: 1em;
+    margin-top: auto;
+}
+
+/* =========================
+   IMAGE OVERLAY (Lightbox)
+========================= */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay:target {
+    display: flex;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+.container {
+    max-width: 200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+/* Gallery image size adjustments */
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .gallery img {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .gallery img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* Navigation adjustments for small screens */
+
+@media (max-width: 320px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
