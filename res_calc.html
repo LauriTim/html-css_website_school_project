@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reference and explanation of resistor color codes, including chart, band meanings, and calculation examples.">
+  <title>Resistor Color Codes</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Resistor Color Codes</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="res_calc.html">Resistor calculator</a></li>
+        </ul>
+    </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Resistor Color Code Overview</h2>
+      <p>
+        Through-hole resistors use a color code with bands to represent their resistance value. The first two (or three)
+        bands are significant digits, the next band is the multiplier, and the last band indicates tolerance.
+      </p>
+      <p>
+        There can be three to six color bands on a resistor, and the meaning of these bands depends on the type of resistor.
+        <strong>Below is the meaning of bands for each resistor type:</strong>
+      </p>
+
+      <ul>
+        <li><strong>3-band resistor:</strong> 2 significant digits, 1 multiplier</li>
+        <li><strong>4-band resistor:</strong> 2 significant digits, 1 multiplier, 1 tolerance</li>
+        <li><strong>5-band resistor:</strong> 3 significant digits, 1 multiplier, 1 tolerance</li>
+        <li><strong>6-band resistor:</strong> 3 significant digits, 1 multiplier, 1 tolerance, 1 temperature coefficient</li>
+      </ul>
+    </section>
+
+    <section id="color-code-chart">
+      <h2>Color Code Chart</h2>
+
+      <table>
+        <caption>Standard Resistor Color Code Reference</caption>
+        <thead>
+          <tr>
+            <th scope="col">Color</th>
+            <th scope="col">1st Band</th>
+            <th scope="col">2nd Band</th>
+            <th scope="col">Multiplier</th>
+            <th scope="col">Tolerance</th>
+            <th scope="col">Temperature Coefficient</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="black">Black</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td></td>
+            <td>250 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="brown">Brown</td>
+            <td>1</td>
+            <td>1</td>
+            <td>10</td>
+            <td>±1%</td>
+            <td>100 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="red">Red</td>
+            <td>2</td>
+            <td>2</td>
+            <td>100</td>
+            <td>±2%</td>
+            <td>50 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="orange">Orange</td>
+            <td>3</td>
+            <td>3</td>
+            <td>10<sup>3</sup></td>
+            <td></td>
+            <td>15 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="yellow">Yellow</td>
+            <td>4</td>
+            <td>4</td>
+            <td>10<sup>4</sup></td>
+            <td></td>
+            <td>25 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="green">Green</td>
+            <td>5</td>
+            <td>5</td>
+            <td>10<sup>5</sup></td>
+            <td>±0.5%</td>
+            <td>2 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="blue">Blue</td>
+            <td>6</td>
+            <td>6</td>
+            <td>10<sup>6</sup></td>
+            <td>±0.25%</td>
+            <td>10 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="violet">Violet</td>
+            <td>7</td>
+            <td>7</td>
+            <td>10<sup>7</sup></td>
+            <td>±0.1%</td>
+            <td>5 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="gray">Gray</td>
+            <td>8</td>
+            <td>8</td>
+            <td>10<sup>8</sup></td>
+            <td>±0.05%</td>
+            <td>1 ppm/K</td>
+          </tr>
+          <tr>
+            <td class="white">White</td>
+            <td>9</td>
+            <td>9</td>
+            <td>10<sup>9</sup></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="gold">Gold</td>
+            <td></td>
+            <td></td>
+            <td>0.1</td>
+            <td>±5%</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="silver">Silver</td>
+            <td></td>
+            <td></td>
+            <td>0.01</td>
+            <td>±10%</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <strong>Note:</strong> The color code chart is a standard reference for resistor color codes. Always verify values
+        with a reliable source when working with electronic components.
+      </p>
+    </section>
+
+    <section id="calculation">
+      <h2>Calculating Resistance</h2>
+      <p>To calculate the resistance of a resistor with a given color code:</p>
+      <ol>
+        <li>Identify the color bands and their corresponding values.</li>
+        <li>Use the formula: <code>Resistance = (First Digit × 10 + Second Digit) × Multiplier</code>.</li>
+        <li>Apply the tolerance value to determine the acceptable range.</li>
+      </ol>
+
+      <article aria-labelledby="example-heading">
+        <h3 id="example-heading">Example Calculation</h3>
+        <p>
+          For example, a 4-band resistor with colors <strong>Red, Black, Brown, Gold</strong> would be calculated as follows:
+        </p>
+        <dl>
+          <dt>First Digit (Red)</dt>
+          <dd>2</dd>
+          <dt>Second Digit (Black)</dt>
+          <dd>0</dd>
+          <dt>Multiplier (Brown)</dt>
+          <dd>10</dd>
+          <dt>Tolerance (Gold)</dt>
+          <dd>±5%</dd>
+        </dl>
+        <p>
+          <strong>Result:</strong> Resistance = (2 × 10 + 0) × 10 = <strong>200 Ω ±5%</strong>
+          (range: 190–210 Ω)
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Resistor Color Codes Reference. All rights reserved.</p>
+  </footer>
+</body>
+</html>
